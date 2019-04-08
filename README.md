@@ -416,7 +416,7 @@ Next, add `SwiftyUserDefaults` to your targets `dependencies` like so:
 
 ```swift
 .target(
-    name: "App",
+    name: "YourTarget",
     dependencies: [
         "SwiftyUserDefaults",
     ]
