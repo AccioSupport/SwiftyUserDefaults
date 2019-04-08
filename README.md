@@ -5,6 +5,7 @@
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](#cocoapods)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](#swift-package-manager)
+[![Accio supported](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](#accio)
 ![Swift version](https://img.shields.io/badge/swift-4.1-orange.svg)
 ![Swift version](https://img.shields.io/badge/swift-4.2-orange.svg)
 ![Swift version](https://img.shields.io/badge/swift-5.0-orange.svg)
@@ -405,17 +406,30 @@ github "radex/SwiftyUserDefaults" "4.0.0-beta.2"
 
 ### Swift Package Manager
 
-Just add to your `Package.swift` under dependencies:
+Add the following to your projects `dependencies` in your `Package.swift`:
+
 ```swift
-let package = Package(
-    name: "MyPackage",
-    products: [...],
-    dependencies: [
-        .package(url: "https://github.com/radex/SwiftyUserDefaults.git", .exact("4.0.0-beta.2")),
-    ],
-    targets: [...]
-)
+.package(url: "https://github.com/radex/SwiftyUserDefaults", .upToNextMajor(from: "4.0.0-beta.2")),
 ```
+
+Next, add `SwiftyUserDefaults` to your targets `dependencies` like so:
+
+```swift
+.target(
+    name: "App",
+    dependencies: [
+        "SwiftyUserDefaults",
+    ]
+),
+```
+
+Then run `swift package update`.
+
+Note that the SwiftPM doesn't support building for iOS/tvOS/macOS/watchOS apps yet – see Accio in the next section for that.
+
+## Accio
+
+[Accio](https://github.com/JamitLabs/Accio) is a dependency manager based on SwiftPM which can build frameworks for iOS/macOS/tvOS/watchOS. Therefore the integration steps are exactly the same as described above. Once your `Package.swift` file is configured, you need to run `accio update` instead of `swift package update` though.
 
 ## More like this
 
