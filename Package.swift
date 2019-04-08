@@ -11,17 +11,11 @@ let package = Package(
             name: "SwiftyUserDefaults",
             targets: ["SwiftyUserDefaults"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git", .branch("master")),
-        .package(url: "https://github.com/Quick/Nimble.git", .branch("master"))
-    ],
     targets: [
         .target(
             name: "SwiftyUserDefaults",
             dependencies: [],
-            path: "Sources"),
-        .testTarget(
-            name: "SwiftyUserDefaultsTests",
-            dependencies: ["SwiftyUserDefaults", "Quick", "Nimble"]),
+            path: "Sources"
+        ),
     ]
 )
