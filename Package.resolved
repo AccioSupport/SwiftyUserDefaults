@@ -14,7 +14,7 @@
         "package": "Quick",
         "repositoryURL": "https://github.com/sunshinejr/Quick.git",
         "state": {
-          "branch": "feature/update_nimble",
+          "branch": null,
           "revision": "abd88afe40a38b7900af02df98417c867bad6671",
           "version": null
         }
