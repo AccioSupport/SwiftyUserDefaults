@@ -12,7 +12,7 @@ let package = Package(
             targets: ["SwiftyUserDefaults"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/sunshinejr/Quick.git", .revision("abd88afe40a38b7900af02df98417c867bad6671")),
+        .package(url: "https://github.com/Quick/Quick.git", .branch("master")),
         .package(url: "https://github.com/Quick/Nimble.git", .branch("master"))
     ],
     targets: [

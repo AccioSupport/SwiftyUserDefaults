@@ -12,10 +12,10 @@
       },
       {
         "package": "Quick",
-        "repositoryURL": "https://github.com/sunshinejr/Quick.git",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
-          "branch": null,
-          "revision": "abd88afe40a38b7900af02df98417c867bad6671",
+          "branch": "master",
+          "revision": "f78b7399ac5c42ad81739b8b55464f649bf101a3",
           "version": null
         }
       }
